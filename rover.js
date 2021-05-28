@@ -36,11 +36,13 @@ class Rover {
           completed: false
           
         }
+        // console.log("CANT MOVE IN THIS STATUS")
         results.push(status)
       }
       else if (messageObject.commands[i].commandType === 'MOVE' && this.mode === 'NORMAL') {
         let status = {
           completed: true
+
 
       
         }

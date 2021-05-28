@@ -63,16 +63,16 @@ describe("Rover class", function() {
   expect(testRover.mode).toEqual("LOW_POWER");
   })
 //test 12
-// it("responds with false completed value when attempting to move in LOW_POWER mode",function(){
-//     let testCommandOne = new Command ("MOVE",20);
-//     let testCommandTwo = new Command ('MODE_CHANGE', 'LOW_POWER');
-//     let testCommandThree = new Command ('STATUS_CHECK');
-//     let testMessage = new Message ("Message with two commands in an Array",[testCommandOne,testCommandTwo]);
-//     let testRover = new Rover(1234);
-//     let response = new Message("name",[testCommandOne,testCommandTwo]);
-//     let objectResponse = testRover.receiveMessage(testMessage);
-//   expect(testRover.status)  
-// })
+it("responds with false completed value when attempting to move in LOW_POWER mode",function(){
+    let testCommandOne = new Command ("MOVE",20);
+    let testCommandTwo = new Command ('MODE_CHANGE', 'LOW_POWER');
+    let testCommandThree = new Command ('STATUS_CHECK');
+    let testMessage = new Message ("Message with two commands in an Array",[testCommandOne,testCommandTwo]);
+    let testRover = new Rover(1234);
+    let response = new Message("name",[testCommandOne,testCommandTwo]);
+    let objectResponse = testRover.receiveMessage(testMessage);
+  expect(testRover.status)  
+})
 //test 13
   /*objectResponse = { 
     message: 'Message with two commands in an Array', 
